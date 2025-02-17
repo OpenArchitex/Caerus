@@ -90,7 +90,7 @@ jobs:
           name: debug-logs-${{ matrix.person }}
           path: debug-logs-${{ matrix.person }}.tar.gz.gpg
   book-missed-slots:
-    if: always()
+    if: ${{ vars.BOOK_MISSED_SLOTS == 'true' }}
     needs: add-persons
     runs-on: ubuntu-22.04
     steps:
