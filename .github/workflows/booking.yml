@@ -75,8 +75,7 @@ jobs:
       # Archive Debug Logs
       - name: Archive Debug Logs
         if: always()
-        continue-on-error: true
-        run: tar -czvf "debug-logs-${{ matrix.person }}.tar.gz" "screenshot-${{ matrix.person }}.png" "screenshot-final-${{ matrix.person }}.png" "recording-${{ matrix.person }}.webm"
+        run: tar -czvf "debug-logs-${{ matrix.person }}.tar.gz" "screenshot-${{ matrix.person }}.png" "screenshot-final-${{ matrix.person }}.png" "recording-${{ matrix.person }}.webm" 2>/dev/null
 
       # Encrypt Debug Logs
       - name: Encrypt Debug Logs
