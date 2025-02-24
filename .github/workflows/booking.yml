@@ -63,9 +63,11 @@ jobs:
           DECRYPTION_SECRET: ${{ secrets.DECRYPTION_SECRET }}
 
       # Setup FFmpeg
-      # Note: Keep setup-ffmpeg@v2 due to https://github.com/federicocarboni/setup-ffmpeg/issues/19
       - name: Setup FFmpeg
-        uses: FedericoCarboni/setup-ffmpeg@v2
+        run: |
+          sudo apt update
+          sudo apt install ffmpeg
+          ffmpeg -version
 
       # Runs Puppeteer
       - name: Run Puppeteer
@@ -102,7 +104,10 @@ jobs:
           DECRYPTION_SECRET: ${{ secrets.DECRYPTION_SECRET }}
 
       - name: Setup FFmpeg
-        uses: FedericoCarboni/setup-ffmpeg@v2
+        run: |
+          sudo apt update
+          sudo apt install ffmpeg
+          ffmpeg -version
 
       - name: Run Puppeteer
         run: node book-missed-slots.mjs
