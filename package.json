@@ -6,7 +6,7 @@
   "dependencies": {
     "dotenv": "^16.5.0",
     "nodemailer": "^7.0.3",
-    "puppeteer": "^24.8.0"
+    "puppeteer": "^24.8.2"
   },
   "engines": {
     "node": "20.x",
