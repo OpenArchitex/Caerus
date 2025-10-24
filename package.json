@@ -5,7 +5,7 @@
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "dotenv": "^17.2.3",
-    "nodemailer": "^7.0.7",
+    "nodemailer": "^7.0.9",
     "puppeteer": "^24.25.0"
   },
   "engines": {
