@@ -84,7 +84,7 @@ jobs:
 
       # Uploads results
       - name: Upload Screenshots
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         if: always()
         with:
           name: debug-logs-${{ matrix.person }}
@@ -117,7 +117,7 @@ jobs:
         run: gpg --batch -c --passphrase ${{ secrets.ARTIFACT_ENCRYPTION_PASS }} "debug-logs-book-missed-slots.tar.gz"
 
       - name: Upload Screenshots
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         if: always()
         with:
           name: debug-logs-book-missed-slots
