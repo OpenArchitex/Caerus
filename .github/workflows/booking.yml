@@ -31,8 +31,6 @@ on:
 jobs:
   define-env:
     runs-on: ubuntu-22.04
-    environment:
-      name: ${{ github.event.client_payload.environment || 'test' }}
     outputs:
       PERSONS: ${{ steps.compute-outputs.outputs.PERSONS }}
       BOOKING_URL: ${{ steps.compute-outputs.outputs.BOOKING_URL }}
