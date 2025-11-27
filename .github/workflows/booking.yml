@@ -10,7 +10,6 @@ env:
   LOGINS: ${{ vars.LOGINS }}
   SIGN_IN_URL: ${{ vars.SIGN_IN_URL }}
   EXEC_MINS: ${{ vars.EXEC_MINS }}
-  AUTO_BOOK: ${{ vars.AUTO_BOOK }}
 
 # Controls when the workflow will run
 on:
@@ -36,16 +35,19 @@ jobs:
     outputs:
       PERSONS: ${{ steps.compute-outputs.outputs.PERSONS }}
       BOOKING_URL: ${{ steps.compute-outputs.outputs.BOOKING_URL }}
+      AUTO_BOOK: ${{ steps.compute-outputs.outputs.AUTO_BOOK }}
     steps:
       - id: compute-outputs
         name: Compute Outputs
         run: |
           echo "PERSONS=${{ toJson(vars.PERSONS) }}" >> "$GITHUB_OUTPUT"
           echo "BOOKING_URL=${{ vars.BOOKING_URL }}" >> "$GITHUB_OUTPUT"
+          echo "AUTO_BOOK=${{ vars.AUTO_BOOK }}" >> "$GITHUB_OUTPUT"
   add-persons:
     needs: define-env
     env:
       BOOKING_URL: ${{ needs.define-env.outputs.BOOKING_URL }}
+      AUTO_BOOK: ${{ needs.define-env.outputs.AUTO_BOOK }}
     # The type of runner that the job will run on
     runs-on: ubuntu-22.04
     strategy:
