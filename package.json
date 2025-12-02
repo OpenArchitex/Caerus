@@ -6,7 +6,7 @@
   "dependencies": {
     "dotenv": "^17.2.3",
     "ghost-cursor": "^1.4.1",
-    "nodemailer": "^7.0.10",
+    "nodemailer": "^7.0.11",
     "puppeteer": "^24.31.0"
   },
   "engines": {
