@@ -3,7 +3,6 @@ name: Booking Action
 env:
   ED_USERNAME: ${{ secrets.ED_USERNAME }}
   ED_PASSWORD: ${{ secrets.ED_PASSWORD }}
-  CAPTCHA_API_KEY: ${{ secrets.CAPTCHA_API_KEY }}
   SENDING_EMAILS: ${{ secrets.SENDING_EMAILS }}
   EMAIL_USERNAME: ${{ secrets.EMAIL_USERNAME }}
   EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
