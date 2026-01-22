@@ -3,9 +3,9 @@ name: Booking Action
 env:
   ED_USERNAME: ${{ secrets.ED_USERNAME }}
   ED_PASSWORD: ${{ secrets.ED_PASSWORD }}
-  SENDING_EMAILS: ${{ secrets.SENDING_EMAILS }}
   EMAIL_USERNAME: ${{ secrets.EMAIL_USERNAME }}
   EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+  SENDING_EMAILS: ${{ vars.SENDING_EMAILS }}
   LOGINS: ${{ vars.LOGINS }}
   SIGN_IN_URL: ${{ vars.SIGN_IN_URL }}
   EXEC_MINS: ${{ vars.EXEC_MINS }}

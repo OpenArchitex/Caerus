@@ -3,9 +3,9 @@ name: Auto Detect Changes
 env:
   USERNAMES: ${{ secrets.USERNAMES }}
   PASSWORDS: ${{ secrets.PASSWORDS }}
-  SENDING_EMAILS: ${{ secrets.SENDING_EMAILS }}
   EMAIL_USERNAME: ${{ secrets.EMAIL_USERNAME }}
   EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+  SENDING_EMAILS: ${{ vars.SENDING_EMAILS }}
   LOGINS: ${{ vars.LOGINS }}
   SIGN_IN_URL: ${{ vars.SIGN_IN_URL }}
   WISH_LIST_URL: ${{ vars.WISH_LIST_URL }}
