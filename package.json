@@ -7,7 +7,7 @@
     "dotenv": "^17.2.3",
     "ghost-cursor": "^1.4.2",
     "nodemailer": "^7.0.12",
-    "puppeteer": "^24.35.0"
+    "puppeteer": "^24.36.0"
   },
   "engines": {
     "node": "24.x",
