@@ -83,7 +83,7 @@ jobs:
 
       # Uploads results
       - name: Upload Screenshots
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         if: always()
         with:
           name: debug-logs-${{ matrix.person }}
