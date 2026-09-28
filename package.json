@@ -4,7 +4,7 @@
   "author": "Sudharaka Palamakumbura",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "dotenv": "^17.4.2",
+    "dotenv": "^18.0.4",
     "ghost-cursor": "^1.4.2",
     "nodemailer": "^10.0.1",
     "puppeteer": "^25.10.0"
